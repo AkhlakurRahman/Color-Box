@@ -13,7 +13,6 @@ export default class Box extends Component {
     do {
       newColor = choice(this.props.colors);
     } while (newColor === this.state.color);
-    console.log(newColor);
     this.setState({ color: newColor });
   };
 

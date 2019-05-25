@@ -23,8 +23,8 @@ export default class BoxContainer extends Component {
   };
 
   render() {
-    const boxes = Array.from({ length: this.props.numBoxes }).map(() => (
-      <Box clicked={this.handleClick} colors={this.props.colors} />
+    const boxes = Array.from({ length: this.props.numBoxes }).map((box, i) => (
+      <Box key={i} colors={this.props.colors} />
     ));
     return <div className={classes.BoxContainer}>{boxes}</div>;
   }
